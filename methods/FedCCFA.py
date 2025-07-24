@@ -1,6 +1,9 @@
 import yaml
 import json
 import time
+import ssl
+# 临时禁用 SSL 验证（开发环境适用）
+ssl._create_default_https_context = ssl._create_unverified_context
 
 from copy import deepcopy
 from torch.nn.utils import vector_to_parameters
